@@ -13,7 +13,7 @@
 // }
 // console.log(changeEven)
 
-// 
+//
 
 /*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
   і перевіряє правильність закриття дужок () {} []
@@ -28,7 +28,23 @@ const someFn = `function foo() {
 
 console.log(checkBrackets(someFn));
 
-checkBrackets(someFn){
+function checkBrackets(someFn) {
+  const stack = [];
+  const bracketsMap = {
+    "(": ")",
+    "{": "}",
+    "[": "]",
+  };
 
-  
-};
+  for (const char of someFn) {
+    if (bracketsMap[char]) {
+      stack.push(char);
+    } else if (Object.values(bracketsMap).includes(char)) {
+      if (bracketsMap[stack.pop()] !== char) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}
