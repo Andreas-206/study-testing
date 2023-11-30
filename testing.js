@@ -13,27 +13,22 @@
 // }
 // console.log(changeEven)
 
-class Car {
-  #brand;
-  constructor({ brand, model, price }) {
-    this.#brand = brand;
-    this.model = model;
-    this.price = price;
-  }
+// 
 
-  getPrice() {
-    return this.price;
-  }
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
 
-  changePrice(newPrice) {
-    this.price = newPrice;
-  }
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
 
-  getBrand() {
-    return this.#brand;
-  }
+console.log(checkBrackets(someFn));
 
-  changeBrand(newBrand) {
-    this.#brand = newBrand;
-  }
-}
+checkBrackets(someFn){
+
+  
+};
