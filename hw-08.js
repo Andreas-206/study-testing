@@ -64,6 +64,61 @@ const images = [
   },
 ];
 
+
+
+
+const gallery = document.querySelector(".gallery");
+
+function createGalleryItem({ preview, original, description }) {
+  const galleryItem = document.createElement("li");
+  galleryItem.classList.add("gallery-item");
+
+  const link = document.createElement("a");
+  link.classList.add("gallery-link");
+  link.href = original;
+
+  const image = document.createElement("img");
+  image.classList.add("gallery-image");
+  image.src = preview;
+  image.setAttribute("data-source", original);
+  image.alt = description;
+
+  link.appendChild(image);
+  galleryItem.appendChild(link);
+
+  return galleryItem;
+}
+
+function onGalleryClick(event) {
+  event.preventDefault();
+
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
+
+  const url = event.target.dataset.source;
+
+  const modal = basicLightbox.create(`
+    <img src="${url}" width="1112" height="640">
+`);
+
+  modal.show();
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      modal.close();
+    }
+  });
+}
+
+function newGallery() {
+  const galleryItems = images.map(createGalleryItem);
+  gallery.append(...galleryItems);
+  gallery.addEventListener("click", onGalleryClick);
+}
+
+newGallery();
+
 // const galleryContainer = document.querySelector(".gallery");
 
 // function createGalleryItem({ preview, original, description }) {
