@@ -383,3 +383,43 @@ newGallery();
 //       instance.close();
 //     }
 //   });
+
+
+
+// const gallery = document.querySelector(".gallery");
+
+// function createGalleryItem({ preview, original, description }) {
+//   return `<li class="gallery-item">
+//     <a class="gallery-link" href="${original}">
+//     <img class="gallery-img"
+//     src="${preview}" 
+//     data-source="${original}" 
+//     alt="${description}">
+//     </a>
+//     </li>`;
+// }
+
+// function onGalleryClick(event) {
+//   event.preventDefault();
+//   if (event.target.nodeName !== "IMG") {
+//     return;
+//   }
+//   const url = event.target.dataset.source;
+//   const modal = basicLightbox.create(
+//     `<img class="modal" src="${url}" width="1112" height="640">`
+//   );
+
+//   modal.show();
+//   document.addEventListener(
+//     "keydown",
+//     (elem) => elem.key === "Escape" && modal.close()
+//   );
+// }
+
+// function newGallery() {
+//   const galleryItemsHTML = images.map(createGalleryItem).join("");
+//   gallery.innerHTML = galleryItemsHTML;
+//   gallery.addEventListener("click", onGalleryClick);
+// }
+
+// newGallery();
