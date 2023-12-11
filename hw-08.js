@@ -366,23 +366,23 @@ newGallery();
 // });
 // 9:34
 // Проще .наверно кусок кода: const instance = basicLightbox.create(htmlItem, {
-//     onShow: instance => {
-//       gallery.addEventListener('click', event);
-//       event.preventDefault();
-//       console.log(`OPEN`);
-//     },
-//     onClose: instance => {
-//       gallery.removeEventListener(`click`, event), console.log('CLOSE');
-//       document.removeEventListener(`keydown`, event),
-//         console.log('CLOSE ESC keydown');
-//     },
-//   });
-//   instance.show(instance => console.log(' SHOW'));
-//   document.addEventListener('keydown', event => {
-//     if (event.code === 'Escape') {
-//       instance.close();
-//     }
-//   });
+    onShow: instance => {
+      gallery.addEventListener('click', event);
+      event.preventDefault();
+      console.log(`OPEN`);
+    },
+    onClose: instance => {
+      gallery.removeEventListener(`click`, event), console.log('CLOSE');
+      document.removeEventListener(`keydown`, event),
+        console.log('CLOSE ESC keydown');
+    },
+  });
+  instance.show(instance => console.log(' SHOW'));
+  document.addEventListener('keydown', event => {
+    if (event.code === 'Escape') {
+      instance.close();
+    }
+  });
 
 
 
