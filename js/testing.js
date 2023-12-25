@@ -21,35 +21,41 @@
   В іншому випадку повертає false
 */
 
-const someFn = `function foo() {
-  const arr = [1, 2, 3];
-  console.log(arr);
-}`;
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
 
-console.log(checkBrackets(someFn));
+// console.log(checkBrackets(someFn));
 
-function checkBrackets(someFn) {
-  const stack = [];
-  const bracketsMap = {
-    "(": ")",
-    "{": "}",
-    "[": "]",
-  };
+// function checkBrackets(someFn) {
+//   const stack = [];
+//   const bracketsMap = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
 
-  for (const char of someFn) {
-    if (bracketsMap[char]) {
-      stack.push(char);
-    } else if (Object.values(bracketsMap).includes(char)) {
-      if (bracketsMap[stack.pop()] !== char) {
-        return false;
-      }
-    }
-  }
+//   for (const char of someFn) {
+//     if (bracketsMap[char]) {
+//       stack.push(char);
+//     } else if (Object.values(bracketsMap).includes(char)) {
+//       if (bracketsMap[stack.pop()] !== char) {
+//         return false;
+//       }
+//     }
+//   }
 
-  return stack.length === 0;
-}
-
-
-//  -------------- //
+//   return stack.length === 0;
+// }
 
 
+const date = new Date();
+
+console.log(date.getTime());
+console.log("Day: ", date.getDate() );
+console.log("Day of the week: ", date.getDay());
+console.log("Month: ", date.getMonth());
+
+
+console.log(new Date(0));
