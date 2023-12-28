@@ -50,13 +50,13 @@
 // }
 
 
-const date = new Date();
+// const date = new Date();
 
-console.log(date.getTime());
-console.log("Day: ", date.getDate() );
-console.log("Day of the week: ", date.getDay());
-console.log("Month: ", date.getMonth());
+// console.log(date.getTime());
+// console.log("Day: ", date.getDate() );
+// console.log("Day of the week: ", date.getDay());
+// console.log("Month: ", date.getMonth());
 
 
-console.log(new Date(0));
+// console.log(new Date(0));
 
