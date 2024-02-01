@@ -1,9 +1,9 @@
 function showLoader() {
-	document.getElementById('loader').style.display = 'block'
+	document.getElementById('.loader').style.display = 'block'
 }
 
 function hideLoader() {
-	document.getElementById('loader').style.display = 'none'
+	document.getElementById('.loader').style.display = 'none'
 }
 
 function makeRequest() {
