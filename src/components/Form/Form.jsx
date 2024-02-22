@@ -41,15 +41,15 @@ const FeedbackForm = () => {
 
 				<label htmlFor={emailFieldId}>Email</label>
 				<Field type='email' name='email' id={emailFieldId} />
-        <ErrorMessage name="username" as="span" />
+        <ErrorMessage name="email" as="span" />
 
 				<label htmlFor={msgFieldId}>Message</label>
 				<Field as='textarea' name='message' id={msgFieldId} rows='5' />
-        <ErrorMessage name="username" as="span" />
+        <ErrorMessage name="message" as="span" />
 
 				<label htmlFor={levelFieldId}>Service satisfaction level</label>
 				<Field as='select' name='level' id={levelFieldId}>
-        <ErrorMessage name="username" as="span" />
+        <ErrorMessage name="level" as="span" />
 					<option value='good'>Good</option>
 					<option value='neutral'>Neutral</option>
 					<option value='bad'>Bad</option>
