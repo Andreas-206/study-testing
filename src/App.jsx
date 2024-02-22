@@ -1,4 +1,7 @@
 import LoginForm from './components/LoginForm/LoginForm'
+import Form from './components/Form/Form'
+
+
 import './App.css'
 
   const App = () => {
