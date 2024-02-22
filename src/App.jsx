@@ -1,7 +1,5 @@
 import LoginForm from './components/LoginForm/LoginForm'
-import Form from './components/Form/Form'
-
-
+import Forma from './components/Form/Form'
 import './App.css'
 
   const App = () => {
@@ -13,6 +11,7 @@ import './App.css'
 			<div>
 				<h1>Please login to your account!</h1>
 				<LoginForm onSubmit={handleLogin} />
+				<Forma />
 			</div>
 		)
 	}
